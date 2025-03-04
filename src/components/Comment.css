@@ -1,0 +1,28 @@
+.comment {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 5px;
+}
+
+.comment__user {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.comment__text {
+  margin-bottom: 5px;
+}
+
+.comment__upvotes {
+  font-size: 0.8em;
+  color: #888;
+}
+
+.comment__upvotes-count {
+  font-weight: bold;
+  color: black;
+}
+
+.comment__upvotes-label {
+  margin-left: 3px;
+}
