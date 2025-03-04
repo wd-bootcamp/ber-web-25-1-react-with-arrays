@@ -95,7 +95,7 @@ export default function App() {
       >
         change order
       </button>
-      <ul className="app__comments">
+      <Comments user="felix">
         {sortedComments.map((comment) => (
           <li key={comment.id}>
             <Comment
@@ -105,9 +105,21 @@ export default function App() {
             />
           </li>
         ))}
-      </ul>
+      </Comments>
     </main>
   );
+}
+
+function Comments({ user, children }) {
+  if (children.length === 0) {
+    return <p>No comments yet.</p>;
+  }
+
+  if (user !== "felix") {
+    return <p>Not authorized.</p>;
+  }
+
+  return <ul className="app__comments">{children}</ul>;
 }
 
 // We need a key so that React can find each element, if the order of the
